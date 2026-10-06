@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<title>jQuery | Dulce Aroma</title></head><body><main>
+<h1>jQuery</h1>
+<p>jQuery es una librería de JavaScript creada en 2006 por John Resig. Nació porque en esa época cada navegador funcionaba distinto y escribir JS puro era largo y difícil. jQuery prometía "escribir menos y hacer más".</p>
+<h2>Sintaxis básica</h2>
+<p>Todo empieza con el símbolo <code>$</code>: seleccionas un elemento y le aplicas una acción.</p>
+<pre><code>$("selector").accion();
+$("#caja-demo").fadeOut();</code></pre>
+<h2>Ventajas y desventajas</h2>
+<table><tr><th>Ventajas</th><th>Desventajas</th></tr>
+<tr><td>Código corto y fácil de leer<br>Animaciones listas para usar<br>Funciona igual en todos los navegadores</td>
+<td>Es una librería extra que hay que cargar<br>JS moderno ya hace casi todo lo mismo<br>Cada vez se usa menos en proyectos nuevos</td></tr></table>
+<h2>Efectos típicos</h2>
+<div id="caja-demo">Promoción: ¡2x1 en frappés los viernes!</div>
+<button class="btn" id="b1">fadeIn</button> <button class="btn" id="b2">fadeOut</button> <button class="btn" id="b3">slideToggle</button>
+<pre><code>$("#b1").click(function(){ $("#caja-demo").fadeIn(); });
+$("#b3").click(function(){ $("#caja-demo").slideToggle(); });</code></pre>
+<h2>JavaScript vs. jQuery</h2>
+<table><tr><th>Acción</th><th>JS Vanilla</th><th>jQuery</th></tr>
+<tr><td>Seleccionar</td><td><code>document.getElementById("caja")</code></td><td><code>$("#caja")</code></td></tr>
+<tr><td>Cambiar texto</td><td><code>el.textContent = "Hola"</code></td><td><code>$("#caja").text("Hola")</code></td></tr>
+<tr><td>Evento clic</td><td><code>el.addEventListener("click", f)</code></td><td><code>$("#caja").click(f)</code></td></tr>
+<tr><td>Ocultar</td><td><code>el.style.display = "none"</code></td><td><code>$("#caja").hide()</code></td></tr></table>
+<div class="fuentes"><h3>Recursos y bibliografía</h3><ul>
+<li>jQuery.com – Documentación oficial: jquery.com</li>
+<li>W3Schools – jQuery Tutorial: w3schools.com/jquery</li>
+<li>MDN Web Docs – Guía de JavaScript: developer.mozilla.org</li></ul></div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+$("#b1").click(function(){ $("#caja-demo").fadeIn(); });
+$("#b2").click(function(){ $("#caja-demo").fadeOut(); });
+$("#b3").click(function(){ $("#caja-demo").slideToggle(); });
+</script></body></html>

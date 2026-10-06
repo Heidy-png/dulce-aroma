@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<title>JSON | Dulce Aroma</title></head><body><main>
+<h1>JSON (JavaScript Object Notation)</h1>
+<p>JSON es un formato de texto ligero para guardar e intercambiar datos. Es el estándar porque es fácil de leer para las personas, fácil de procesar para las máquinas y lo entienden casi todos los lenguajes de programación.</p>
+<h2>Estructura básica</h2>
+<ul><li><b>Pares clave-valor:</b> <code>"nombre": "Cupcake"</code></li>
+<li><b>Objetos:</b> van entre llaves <code>{ }</code></li>
+<li><b>Arreglos:</b> listas entre corchetes <code>[ ]</code></li></ul>
+<h2>Objeto JS vs. cadena JSON</h2>
+<table><tr><th>Objeto de JavaScript</th><th>Cadena JSON</th></tr><tr><td>
+<pre><code>const postre = {
+  nombre: 'Cupcake',
+  precio: 2.5,
+  sabores: ['fresa','vainilla']
+};</code></pre></td><td>
+<pre><code>{
+  "nombre": "Cupcake",
+  "precio": 2.5,
+  "sabores": ["fresa","vainilla"]
+}</code></pre></td></tr></table>
+<p>En JSON las claves siempre llevan comillas dobles y no se permiten comentarios.</p>
+<h2>Conviértelo tú mismo</h2>
+<div class="caja"><button class="btn" id="btn-json">Convertir objeto a JSON</button>
+<pre id="salida"><code>Presiona el botón...</code></pre></div>
+<pre><code>const texto = JSON.stringify(postre);   // objeto -> JSON
+const objeto = JSON.parse(texto);       // JSON -> objeto</code></pre>
+<h2>JSON y las APIs</h2>
+<p>Cuando una app necesita datos (por ejemplo el menú de postres), el navegador envía una petición al servidor o API. El servidor responde con JSON y el JavaScript de la página lo convierte en objetos para mostrarlo en pantalla.</p>
+<div class="flujo"><span class="paso">Navegador</span><span class="flecha">→ petición →</span><span class="paso">Servidor / API</span><span class="flecha">→ respuesta JSON →</span><span class="paso">Página actualizada</span></div>
+<pre><code>fetch("https://api.ejemplo.com/postres")
+  .then(res => res.json())
+  .then(datos => console.log(datos));</code></pre>
+<div class="fuentes"><h3>Recursos y bibliografía</h3><ul>
+<li>MDN Web Docs – Trabajando con JSON: developer.mozilla.org/es/docs/Learn/JavaScript/Objects/JSON</li>
+<li>json.org – Introducción a JSON: json.org/json-es.html</li>
+<li>W3Schools – JSON Tutorial: w3schools.com/js/js_json_intro.asp</li></ul></div>
+</main><script src="js/main.js"></script>
+<script>
+const postre = {nombre:'Cupcake', precio:2.5, sabores:['fresa','vainilla']};
+document.getElementById("btn-json").onclick = function(){
+  document.getElementById("salida").textContent = JSON.stringify(postre, null, 2);
+};
+</script></body></html>

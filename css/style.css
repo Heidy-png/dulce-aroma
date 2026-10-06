@@ -1,0 +1,35 @@
+/* Dulce Aroma - estilos generales */
+:root{--ciruela:#3B2348;--frambuesa:#E8456B;--mango:#F7B267;--fondo:#FFF5F7}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Nunito',Arial,sans-serif;background:var(--fondo);color:var(--ciruela);line-height:1.65}
+h1,h2,h3{font-family:'Pacifico',Georgia,serif;font-weight:400;line-height:1.2}
+header{background:var(--ciruela);padding:10px 5%;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-family:'Pacifico',cursive;font-size:1.5rem}
+nav a{color:#fff;text-decoration:none;margin:0 8px;padding:4px 2px;border-bottom:2px solid transparent}
+nav a:hover,nav a.activo{border-color:var(--mango)}
+main{max-width:900px;margin:auto;padding:30px 5%}
+.hero{background:linear-gradient(135deg,var(--frambuesa),var(--mango));color:#fff;text-align:center;padding:60px 5%}
+.hero h1{font-size:3rem;margin:0}
+.btn{display:inline-block;background:var(--ciruela);color:#fff;border:0;padding:10px 22px;border-radius:30px;text-decoration:none;cursor:pointer;font:inherit}
+.btn:hover{background:var(--frambuesa)}
+.tarjetas{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.tarjeta{background:#fff;border-radius:14px;padding:18px;border-top:5px solid var(--frambuesa)}
+.tarjeta:nth-child(even){border-color:var(--mango)}
+.colores{display:flex;flex-wrap:wrap;gap:12px}
+.color{flex:1 1 200px;border-radius:12px;padding:16px;color:#fff;font-size:.9rem}
+pre{background:#2b2b3a;color:#f8f8f2;padding:14px;border-radius:10px;overflow-x:auto;font-size:.88rem}
+code{font-family:Consolas,monospace}
+table{width:100%;border-collapse:collapse;background:#fff;margin:14px 0}
+th,td{border:1px solid #e6cfd6;padding:8px;text-align:left;vertical-align:top}
+th{background:var(--ciruela);color:#fff}
+.caja{background:#fff;border-left:6px solid var(--mango);padding:14px 18px;border-radius:8px;margin:16px 0}
+.flujo{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.paso{background:var(--frambuesa);color:#fff;padding:8px 12px;border-radius:10px;font-size:.9rem}
+.flecha{font-weight:bold}
+.fuentes{margin-top:40px;border-top:2px dashed var(--frambuesa);padding-top:10px;font-size:.9rem}
+footer{background:var(--ciruela);color:#fff;text-align:center;padding:16px;font-size:.9rem}
+.preg{background:#fff;padding:16px;border-radius:12px;margin-bottom:14px}
+.preg label{display:block;padding:4px 0;cursor:pointer}
+.ok{color:#1b7a3d;font-weight:bold}.mal{color:#c0392b;font-weight:bold}
+#caja-demo{background:var(--mango);padding:14px;border-radius:10px;margin:10px 0}
+@media(max-width:600px){.hero h1{font-size:2.2rem}}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<title>JavaScript | Dulce Aroma</title></head><body><main>
+<h1>JavaScript (JS Vanilla)</h1>
+<p>JavaScript es un lenguaje de programación que hace que las páginas web cobren vida: permite reaccionar a clics, validar formularios, mostrar mensajes y cambiar el contenido sin recargar la página.</p>
+<h2>HTML, CSS y JS</h2>
+<table><tr><th>Tecnología</th><th>Función</th><th>En Dulce Aroma</th></tr>
+<tr><td>HTML</td><td>Estructura</td><td>El título y el botón de pedir</td></tr>
+<tr><td>CSS</td><td>Estilo</td><td>Los colores frambuesa y ciruela</td></tr>
+<tr><td>JS</td><td>Comportamiento</td><td>Sumar el pedido al hacer clic</td></tr></table>
+<h2>Conceptos básicos</h2>
+<ul><li><b>Variable:</b> guarda un dato (<code>let precio = 3.5;</code>).</li>
+<li><b>Función:</b> bloque de código que se puede reutilizar.</li>
+<li><b>Evento:</b> algo que hace el usuario, como <code>click</code> o <code>mouseover</code> (hover).</li></ul>
+<h2>Ejemplo práctico</h2>
+<pre><code>let total = 0;
+function pedir(precio){
+  total = total + precio;
+  document.getElementById("total").textContent = "Total: $" + total.toFixed(2);
+}</code></pre>
+<p>La función <code>pedir</code> suma el precio al total y lo muestra en pantalla. Pruébalo:</p>
+<div class="caja"><button class="btn" onclick="pedir(2.5)">Cupcake $2.50</button>
+<button class="btn" onclick="pedir(3)">Frappé $3.00</button>
+<button class="btn" onclick="total=0;pedir(0)">Vaciar</button>
+<p id="total"><b>Total: $0.00</b></p></div>
+<div class="fuentes"><h3>Recursos y bibliografía</h3><ul>
+<li>MDN Web Docs – JavaScript: developer.mozilla.org/es/docs/Web/JavaScript</li>
+<li>W3Schools – JavaScript Tutorial: w3schools.com/js</li></ul></div>
+</main><script src="js/main.js"></script>
+<script>
+let total = 0;
+function pedir(precio){
+  total = total + precio;
+  document.getElementById("total").innerHTML = "<b>Total: $" + total.toFixed(2) + "</b>";
+}
+</script></body></html>

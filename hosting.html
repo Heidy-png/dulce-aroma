@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<title>Hosting y Dominios | Dulce Aroma</title></head><body><main>
+<h1>Web Hosting y Dominios</h1>
+<p>Para que una página se vea en internet necesita estar guardada en un servidor siempre encendido (hosting) y tener una dirección fácil de recordar (dominio).</p>
+<h2>Web Hosting</h2>
+<p>Es el servicio que alquila espacio en un servidor para guardar los archivos del sitio.</p>
+<table><tr><th>Tipo</th><th>Descripción</th></tr>
+<tr><td>Compartido</td><td>Muchos sitios usan el mismo servidor. Es barato, pero con recursos limitados.</td></tr>
+<tr><td>VPS</td><td>Servidor virtual con recursos propios. Da más control y rendimiento.</td></tr>
+<tr><td>Nube</td><td>Varios servidores conectados. Crece según la demanda y es muy estable.</td></tr></table>
+<div class="caja"><b>¿Cómo funciona Vercel?</b> Vercel es una plataforma en la nube ideal para sitios estáticos (HTML, CSS y JS). Se conecta a un repositorio de GitHub y, cada vez que haces un commit, publica automáticamente la nueva versión en una URL como <code>nombre-proyecto.vercel.app</code>.</div>
+<h2>Dominios</h2>
+<ul><li><b>Nombre de dominio:</b> la dirección legible de un sitio (ej. <code>dulcearoma.com</code>). Reemplaza a la dirección IP numérica.</li>
+<li><b>TLD:</b> la terminación del dominio: <code>.com</code> (comercial), <code>.net</code> (redes), <code>.org</code> (organizaciones).</li>
+<li><b>Subdominio:</b> prefijo antes del dominio, como <code>pedidos.dulcearoma.com</code>.</li></ul>
+<h2>Propagación DNS</h2>
+<p>El DNS funciona como una agenda que traduce el dominio a la IP del servidor. Cuando se cambia, la actualización tarda de minutos a 48 horas en llegar a todos los servidores del mundo; a eso se le llama propagación.</p>
+<div class="flujo"><span class="paso">Escribes el dominio</span><span class="flecha">→</span><span class="paso">Servidor DNS</span><span class="flecha">→</span><span class="paso">Devuelve la IP</span><span class="flecha">→</span><span class="paso">Se carga el sitio</span></div>
+<div class="fuentes"><h3>Recursos y bibliografía</h3><ul>
+<li>MDN Web Docs – ¿Qué es un nombre de dominio?: developer.mozilla.org/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name</li>
+<li>Vercel Docs: vercel.com/docs</li>
+<li>Cloudflare Learning – ¿Qué es el DNS?: cloudflare.com/es-es/learning/dns/what-is-dns</li></ul></div>
+</main><script src="js/main.js"></script></body></html>
